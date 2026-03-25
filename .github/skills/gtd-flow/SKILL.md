@@ -1,68 +1,160 @@
 ---
 name: gtd-flow
-description: Manage the GTD workflow in Notion and process captures that may belong either to Notion GTD or to the local Second Brain and Media systems. Use when the user asks to capture, clarify, organize, review, execute, procesar inbox, vaciar capturas, aclarar entradas, triage notes, crear tareas, proyectos, areas, next actions, waiting, scheduled, someday, revision semanal, inbox o flujo GTD.
+description: Manage the full GTD workflow only in Notion through the MCP. Use when the user asks to capture, clarify, organize, review, execute, vaciar inbox, aclarar entradas, crear tareas, proyectos o areas, revisar pendientes, next actions, waiting, scheduled, someday, revision diaria, revision semanal o flujo GTD.
 ---
 
 # GTD Flow Skill
 
-For GitHub Copilot, manage GTD in Notion through the Notion MCP. Obsidian is no longer the source of truth for GTD in this repo.
+For GitHub Copilot, operate the GTD system only in Notion through the Notion MCP.
 
-## Source of Truth
+Notion is the only source of truth for GTD in this repo.
 
-- Notion project database
-- Notion task database
+Do not route GTD captures to local files.
+Do not recreate GTD state outside Notion.
+
+## System Scope
+
+- `Bandeja de Entrada`
+- `Tareas`
+- `Proyectos`
+- `Áreas`
+- review surfaces in Notion such as `Plan de acción`, `Revisión Diaria`, `Revisión semanal`, and filtered execution views
 
 ## Notion Schema
 
 Use these exact properties when creating or updating GTD items in Notion.
 
-### Projects
+Property names and option labels are case-sensitive and accent-sensitive.
 
-- `Name` (title): project name
-- `Estado` (status): `Sin procesar|Por empezar|Activo|En espera|En revision|Terminado`
-- `Fecha` (date): expected date
-- `Link` (url): optional related URL
-- `Esta Archivado?` (checkbox): optional
-- `Tareas` (relation): related tasks
+### Bandeja de Entrada
 
-### Tasks
+- `Name` (title): raw capture text
+- `Link` (url): optional source link
 
-- `Nombre` (title): task name
-- `Estado` (status): `Not started|In progress|Done`
-- `Proyecto` (relation): related project
-- `Tipo` (select): `Accionables|Calendario|Seguimiento|Algun dia|Delegar|Papelera`
-- `Prioridad` (select): `3. Critico|2. Alta|1. Normal`
-- `Contexto` (multi_select): `Casa|Trabajo|Celular|Computador|Tienda|Fuera de Casa|Leer/Revisar|Entretenimiento|Audio|Citas|Veterinaria|Anny|Diana|Revisar para comprar|Alta Energia|Baja Energia`
-- `Fecha` (date): optional due or target date
-- `Fecha Alerta` (date): optional reminder date
-- `Link` (url): optional related URL
-- `Responsable delegado` (select): optional delegated owner
-- `Tiempo estimado(min)` (number): optional
-- `Dependencia` (relation): prerequisite tasks
-- `Dependientes` (relation): downstream tasks
+Use `Bandeja de Entrada` when the capture is still unclarified.
+
+### Áreas
+
+- Editable properties:
+	- `Name` (title): area name
+	- `Archivado?` (checkbox): optional
+	- `Proyectos` (relation): related projects
+	- `Recursos` (relation): related resources
+
+### Proyectos
+
+- Editable properties:
+	- `Name` (title): project name
+	- `Estado` (status): `Sin procesar|Por empezar|Activo|En espera|En revisión|Terminado`
+	- `Fecha` (date): expected date
+	- `Link` (url): optional related URL
+	- `Está Archivado?` (checkbox): optional
+	- `Tareas` (relation): related tasks
+	- `Recursos` (relation): related resources
+	- `Área` (relation): related area
+- Read-only properties. Do not send them in payloads:
+	- `ID`
+	- `Fecha de Creación`
+	- `Fecha de actualización`
+	- `Fecha de actualización - Tareas`
+	- `Progreso`
+	- `Tiempo total`
+	- `Tiempo total estimado`
+	- `Add Resource`
+	- `Add Task`
+
+### Tareas
+
+- Editable properties:
+	- `Nombre` (title): task name
+	- `Estado` (status): `Not started|In progress|Done`
+	- `Proyecto` (relation): related project
+	- `Tipo` (select): `Accionables|Calendario|Seguimiento|Algún día|Delegar|Papelera`
+	- `Prioridad` (select): `3. Crítico|2. Alta|1. Normal`
+	- `Contexto` (multi_select): `Casa|Trabajo|Celular|Computador|Tienda|Fuera de Casa|Leer/Revisar|Entretenimiento|Audio|Citas|Veterinaria|Anny|Diana|Revisar para comprar|Alta Energía|Baja Energía|Calle`
+	- `Fecha` (date): optional due or target date
+	- `Fecha Alerta` (date): optional reminder date
+	- `Link` (url): optional related URL
+	- `Responsable delegado` (select): optional delegated owner
+	- `Tiempo estimado(min)` (number): optional
+	- `Dependencia` (relation): prerequisite tasks
+	- `Dependientes` (relation): downstream tasks
+	- `Material de consulta` (relation): related resources
+	- `Meta` (relation): related goals
+	- `Time log` (relation): related time entries
+- Read-only properties. Do not send them in payloads:
+	- `Estado del Proyecto`
+	- `Fecha actualización`
+	- `Fecha de creación`
+	- `Fecha del proyecto`
+	- `Dependencias completas`
+	- `Priorizar hoy`
+	- `Start`
+	- `Finish`
+	- `Task ID`
+	- `Project ID`
+	- `Tiempo de Tarea`
+	- `Tiempo de Tarea(min)`
+	- `Tiempo estimado`
 
 ## GTD Mapping
 
-Use this mapping when translating GTD concepts into Notion fields.
-
+- `inbox` -> item in `Bandeja de Entrada`
 - `next` -> task with `Tipo: Accionables`
-- `scheduled` -> task with `Tipo: Calendario` and relevant `Fecha`
-- `waiting` -> task with `Tipo: Seguimiento` or `Delegar`, depending on whether follow-up or delegation is the main state
-- `someday` -> task with `Tipo: Algun dia`
+- `scheduled` -> task with `Tipo: Calendario` and relevant `Fecha` or `Fecha Alerta`
+- `waiting` -> task with `Tipo: Seguimiento` or `Delegar`
+- `someday` -> task with `Tipo: Algún día`
 - `done` -> task with `Estado: Done`
 - active project -> project with `Estado: Activo`
 - on hold project -> project with `Estado: En espera`
-- review project -> project with `Estado: En revision`
+- review project -> project with `Estado: En revisión`
 - finished project -> project with `Estado: Terminado`
+- area -> record in `Áreas`
+- discarded item -> task with `Tipo: Papelera`, or deletion from inbox if it should not persist
 
-## Clarification Rules
+## Full Process
 
-### Create a task when
+### 1. Capture
+
+Capture directly in Notion.
+
+Use `Bandeja de Entrada` when:
+
+- the item is still ambiguous
+- the next action is not yet decided
+- the user is dumping raw captures for later clarification
+
+Create a task directly when:
+
+- there is already one clear physical next action
+- the required project context is already known or unnecessary
+
+Create a project directly when:
+
+- the desired outcome clearly requires more than one action
+- the result is already well defined at capture time
+
+Create an area directly when:
+
+- the user is defining or updating an ongoing responsibility
+- the request is about a stable domain of attention rather than a temporary outcome
+
+### 2. Clarify
+
+When clarifying an inbox item, decide exactly one outcome:
+
+- delete it
+- incubate it as `Algún día`
+- convert it into one task
+- convert it into one project plus at least one next action when clear
+- convert it into or link it to an area
+
+Create a task when:
 
 - there is one concrete next physical action
-- the result can be advanced directly from a single note
+- the outcome can be advanced directly without project planning
 
-Key properties:
+Key task properties:
 
 - `Nombre`
 - `Estado`
@@ -75,136 +167,75 @@ Key properties:
 - `Responsable delegado`
 - `Tiempo estimado(min)`
 - `Dependencia`
+- `Material de consulta`
+- `Meta`
 
-Required content sections:
+Use the task body only when execution detail is actually useful.
 
-- use the task page body only when extra execution detail is useful
-
-### Create a project when
+Create a project when:
 
 - the result needs more than one action
 - the user is managing an outcome, not just a task
 
-Create it in Notion using the MCP and the schema documented in this skill.
-
-Key properties:
+Key project properties:
 
 - `Name`
 - `Estado`
 - `Fecha`
 - `Link`
 - `Tareas`
-
-Required content sections:
-
-- use the project page body only when supporting detail is useful
+- `Recursos`
+- `Área`
 
 Every active project should be able to point to at least one actionable task.
 
-### Create an area when
+Create an area when:
 
-- the note represents an ongoing responsibility
+- the user is defining an ongoing responsibility
 - the user needs standards, stewardship, or a stable domain of attention
 
-Represent it in Notion only if the user's GTD setup there supports areas explicitly. If there is no dedicated areas database, model the area through project/task categorization, context, or ask the user how they want it represented.
+Key area properties:
 
-## Workflow
-
-### 1. Capture
-
-- If the item is unprocessed, capture it in Notion through the appropriate GTD inbox or unprocessed state.
-- If the next action is already obvious, create the task directly in Notion.
-
-### Capture Routing
-
-When processing a raw capture, first decide whether it belongs to GTD in Notion or to the local vault.
-
-Target systems:
-
-- Notion GTD
-- `02 Second Brain/Resources/`
-- `02 Second Brain/Bibliography/`
-- `02 Second Brain/Notes/`
-- `03 Media/Books/`
-- `03 Media/Anime/`
-- `03 Media/Manga/`
-- `03 Media/Movies/`
-- `03 Media/Series/`
-- `90 Archive/`
-
-Route a capture to Notion GTD when:
-
-- it represents one concrete next physical action
-- it is a commitment, follow-up, reminder, or deliverable
-- it describes an outcome that needs multiple actions
-
-Route a capture to the local vault when:
-
-- it is primarily reference material
-- it is a synthesized idea in the user's own words
-- it is mainly something to read, watch, or track as cultural consumption
-- it is not actionable but still worth preserving
-
-Archive a capture when:
-
-- it is neither actionable nor worth keeping active now
-
-### 2. Clarify
-
-Decide exactly one of these outcomes:
-
-- `task`
-- `project`
-- `resource`
-- `note`
-- `media`
-- `archive`
-
-If the result is actionable:
-
-- create a Notion task when there is one concrete next physical action
-- create a Notion project when the result needs more than one action
-- represent an area in Notion only if the GTD setup there supports it explicitly
-
-If the result is informational:
-
-- use `99 Templates/Resource Template.md` for general references
-- use `99 Templates/Bibliography Template.md` for sources used as thinking input
-- use `02 Second Brain/Notes/` for durable synthesized understanding
-
-If the result is consumable:
-
-- use `99 Templates/Media Template.md` and the correct subtype folder under `03 Media/`
+- `Name`
+- `Archivado?`
+- `Proyectos`
+- `Recursos`
 
 ### 3. Organize
 
-- link tasks to their project and area when applicable
-- keep statuses short and explicit
-- move completed or dead items out of active flow
-- do not recreate GTD records in Obsidian unless the user explicitly asks for a supporting local note
-
-When creating in Notion:
-
-- use exact property names
-- prefer updating existing records over duplicates
-- do not invent select or status values outside the schema above
-- create at least one actionable task for every active project when the next step is clear
-
-When organizing local captures:
-
-- preserve important context from the original capture
-- do not keep duplicates when an existing local note already represents the same source
-- remove or archive temporary capture material only after the information has a stable destination
-- if the capture is ambiguous, do not force it into the local vault; state exactly what is still unclear
+- Prefer updating existing Notion records over duplicates.
+- Use exact property names and exact option labels.
+- Link every task to its project when applicable.
+- Link every project to its area when applicable.
+- Use `Material de consulta` and `Recursos` when supporting material matters operationally.
+- Move dead or discarded tasks to `Tipo: Papelera` instead of leaving them ambiguous.
+- Mark completed tasks with `Estado: Done`.
+- Move finished projects to `Estado: Terminado` and archive only when appropriate.
+- Do not leave active projects without at least one actionable task when the next step is known.
 
 ### 4. Review
 
-Minimum weekly review:
+Minimum daily review in Notion:
 
-1. empty the Notion inbox or unprocessed GTD queue
-2. ensure every active project has a `next` action
-3. review stale `waiting` and `scheduled` items
-4. archive or close inactive work in Notion
+1. process `Bandeja de Entrada`
+2. check calendar-driven work and preparation needs
+3. review tasks from active projects
+4. review follow-ups or delegated work that needs movement
+5. choose the day priority from current actionable lists
+
+Minimum weekly review in Notion:
+
+1. empty `Bandeja de Entrada`
+2. review calendar past and upcoming commitments
+3. review active projects without actions
+4. review projects that can be activated
+5. review projects in `En revisión`
+6. review areas that may need strengthening through projects or actions
+7. review `Algún día` items for activation
+8. review stale `Seguimiento`, `Delegar`, and `Calendario`
+9. close, trash, or archive work that is no longer active
+
+Use the existing Notion review pages and filtered views as operational surfaces when they help answer the request faster, but treat the underlying databases as the canonical data.
 
 ### 5. Execute
 
@@ -216,12 +247,24 @@ Prioritize by:
 4. real date
 5. priority
 
+Use the context views already present in Notion when the request is about what can be done now in a specific context.
+
+## Payload Rules
+
+- Only send editable properties.
+- For dates, use expanded date fields when the MCP requires them.
+- For checkbox fields, use `__YES__` or `__NO__` when applicable.
+- For relations, use the actual Notion page references expected by the MCP flow in use.
+- Never invent select, status, or multi-select values outside the live schema above.
+- Rename records only through `Name` for projects and areas, and `Nombre` for tasks.
+
 ## Operating Principles
 
-- One note per task, project, or area.
-- Use Notion relations as the GTD source of truth.
+- Notion is the only GTD source of truth.
+- Use the live Notion schema, not remembered schema.
+- One record per task, project, area, or inbox capture.
 - Keep task language physical and executable.
-- Do not hide operational state in prose if it belongs in Notion properties.
-- Prefer updating existing Notion records over duplicating the same commitment.
-- This skill must be sufficient to operate GTD even if no other Notion skill is available.
-- Treat capture processing as a routing decision before creating anything.
+- Do not hide operational state in page prose when it belongs in properties.
+- Prefer updating over duplicating.
+- Use this skill as the full GTD process reference.
+- Do not include local vault routing, local GTD mirrors, or local fallback rules in GTD handling.
