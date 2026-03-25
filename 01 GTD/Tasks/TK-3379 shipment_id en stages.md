@@ -32,9 +32,15 @@ Corregir la logica y validaciones de `shipment_id` en `stages` para reconstrucci
 
 - [ ] Sin validacion por field limit: 100 caracteres.
 - [ ] Sin validacion duplicate value: Ya existe un booking con este mismo numero.
-- [ ] Sin validacion invalid value: El shipment no se encuentra en la hoja de shipments.
-- [ ] Mantener validacion `invalid value` cuando el dato no existe en la base de datos.
+- [ ] Sin validacion invalid value: `Shipment in field [nombre del campo segun la llave column_name del JSON] not found in shipment sheet`.
+- [ ] Mantener validacion `invalid value` cuando el dato no existe en la base de datos: `Data in field [nombre del campo segun la llave column_name del JSON] does not exist in the database.`
 
 ## Nota original
 
 > Esto ocurre cuando la etapa no esta asociada a un shipment del excel.
+
+## Alcance tecnico
+
+- Primero intenta reconstruir usando datos presentes en el excel.
+- Si no existen registros asociados en el archivo, debe resolver el shipment contra la base de datos.
+- La regla de obligatoriedad depende de la ausencia de `booking_number` y `bl_number`.

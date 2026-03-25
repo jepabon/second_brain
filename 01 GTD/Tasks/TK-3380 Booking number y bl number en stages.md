@@ -32,7 +32,7 @@ Definir claramente el uso y las validaciones de `booking_number` y `bl_number` e
 
 ### Validaciones
 
-- [ ] Mantener mensaje existente cuando el dato no existe en la base de datos.
+- [ ] Mantener mensaje existente cuando el dato no existe en la base de datos: `Data in field [nombre del campo segun la llave column_name del JSON] does not exist in the database.`
 
 ### Bl number
 
@@ -41,4 +41,10 @@ Definir claramente el uso y las validaciones de `booking_number` y `bl_number` e
 
 ### Validaciones
 
-- [ ] Mantener mensaje existente cuando el dato no existe en la base de datos.
+- [ ] Mantener mensaje existente cuando el dato no existe en la base de datos: `Data in field [nombre del campo segun la llave column_name del JSON] does not exist in the database.`
+
+## Alcance tecnico
+
+- `booking_number` solo entra en juego cuando `shipment_id` no esta disponible.
+- `bl_number` solo entra en juego cuando tampoco existe `booking_number`.
+- Ambos campos sirven para localizar etapas a reconstruir, no para redefinir la logica base del shipment.
