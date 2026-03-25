@@ -72,6 +72,10 @@ Use `Bandeja de Entrada` when the capture is still unclarified.
 	- `Tipo` (select): `Accionables|Calendario|Seguimiento|Algún día|Delegar|Papelera`
 	- `Prioridad` (select): `3. Crítico|2. Alta|1. Normal`
 	- `Contexto` (multi_select): `Casa|Trabajo|Celular|Computador|Tienda|Fuera de Casa|Leer/Revisar|Entretenimiento|Audio|Citas|Veterinaria|Anny|Diana|Revisar para comprar|Alta Energía|Baja Energía|Calle`
+	- `Energía` (select): `Alta|Baja`
+	- `Herramienta` (multi_select): `Celular|Computador`
+	- `Entorno` (multi_select): `Casa|Trabajo|Tienda|Fuera de Casa|Calle|Veterinaria|Citas|Leer/Revisar|Entretenimiento|Audio|Revisar para comprar`
+	- `Agenda` (multi_select): `Anny|Diana`
 	- `Fecha` (date): optional due or target date
 	- `Fecha Alerta` (date): optional reminder date
 	- `Link` (url): optional related URL
@@ -161,6 +165,10 @@ Key task properties:
 - `Tipo`
 - `Prioridad`
 - `Contexto`
+	- `Energía`
+	- `Herramienta`
+	- `Entorno`
+	- `Agenda`
 - `Proyecto`
 - `Fecha`
 - `Fecha Alerta`
@@ -248,6 +256,121 @@ Prioritize by:
 5. priority
 
 Use the context views already present in Notion when the request is about what can be done now in a specific context.
+
+## View Structure
+
+Current GTD execution views in Notion are split between the canonical `Tareas` database and a linked database block under `Plan de acción` > `Acciones Siguientes`.
+
+### Canonical views in `Tareas`
+
+- `Ahora`
+	- type: `board`
+	- filter: `Tipo = Accionables`
+	- group by: `Estado`
+	- display: `Nombre`, `Prioridad`, `Proyecto`, `Energía`, `Herramienta`, `Entorno`
+
+- `Seguimiento activo`
+	- type: `board`
+	- filter: `Tipo = Seguimiento`
+	- group by: `Estado`
+	- display: `Nombre`, `Proyecto`, `Fecha`, `Fecha Alerta`
+
+- `Delegado activo`
+	- type: `board`
+	- filter: `Tipo = Delegar`
+	- group by: `Estado`
+	- display: `Nombre`, `Proyecto`, `Responsable delegado`, `Fecha`, `Fecha Alerta`
+
+- `Calendario GTD`
+	- type: `table`
+	- filter: `Tipo = Calendario`
+	- sort: `Fecha ASC`
+	- display: `Nombre`, `Fecha`, `Fecha Alerta`, `Proyecto`, `Estado`
+
+- `Accionables vencidas`
+	- type: `table`
+	- filter: `Tipo = Accionables`
+	- sort: `Fecha ASC`
+	- display: `Nombre`, `Fecha`, `Fecha Alerta`, `Proyecto`, `Estado`, `Prioridad`
+
+- `Migración de contexto`
+	- type: `table`
+	- sort: `Fecha actualización DESC`
+	- display: `Nombre`, `Tipo`, `Estado`, `Entorno`, `Herramienta`, `Agenda`, `Energía`, `Proyecto`
+
+### Linked execution views in `Plan de acción` > `Acciones Siguientes`
+
+These are lightweight execution surfaces over the same `Tareas` data source.
+
+- `Acciones de Proyectos`
+	- type: `board`
+	- filter: `Tipo = Accionables`
+	- group by: `Estado`
+	- sort: `Prioridad ASC`
+	- display: `Nombre`
+
+- `Trabajo`
+	- type: `board`
+	- filter: `Tipo = Accionables` and `Entorno contains Trabajo`
+	- group by: `Estado`
+	- sort: `Prioridad ASC`
+	- display: `Nombre`
+
+- `Casa`
+	- type: `board`
+	- filter: `Tipo = Accionables` and `Entorno contains Casa`
+	- group by: `Estado`
+	- sort: `Fecha actualización DESC`
+	- display: `Nombre`
+
+- `Computador`
+	- type: `board`
+	- filter: `Tipo = Accionables` and `Herramienta contains Computador`
+	- group by: `Estado`
+	- sort: `Prioridad ASC`
+	- display: `Nombre`
+
+- `Celular`
+	- type: `board`
+	- filter: `Tipo = Accionables` and `Herramienta contains Celular`
+	- group by: `Estado`
+	- sort: `Prioridad ASC`
+	- display: `Nombre`
+
+- `Diana`
+	- type: `board`
+	- filter: `Tipo = Accionables` and `Agenda contains Diana`
+	- group by: `Estado`
+	- sort: `Fecha ASC`
+	- display: `Nombre`
+
+- `Fuera de Casa`
+	- type: `board`
+	- filter: `Tipo = Accionables` and `Entorno contains Fuera de Casa`
+	- group by: `Estado`
+	- sort: `Fecha ASC`
+	- display: `Nombre`
+
+- `Consumo/lectura`
+	- type: `board`
+	- filter: `Tipo = Accionables` and `Entorno contains Leer/Revisar`
+	- group by: `Estado`
+	- display: `Nombre`
+
+## View Creation Rules
+
+When creating or repairing GTD views in Notion, follow these rules:
+
+- Treat the canonical `Tareas` database as the source of truth and linked views as disposable execution surfaces.
+- Prefer simple filters over nested legacy logic.
+- For execution views, filter on `Tipo = Accionables` plus one axis only: `Entorno`, `Herramienta`, or `Agenda`.
+- Use `enum_contains` semantics for multi-select axes. In view DSL this means `FILTER "Propiedad" = "Valor"` may compile into `enum_contains` for the resulting view.
+- Group execution boards by `Estado`.
+- Keep linked execution boards visually minimal. In the current working setup they display only `Nombre`.
+- Do not depend on `Contexto` for new execution views. Use `Entorno`, `Herramienta`, `Agenda`, and `Energía` instead.
+- Do not include button properties like `Start`, `Finish`, or `Priorizar hoy` in execution linked views unless the user explicitly asks for them.
+- Avoid reusing old broken linked databases in `Plan de acción`. If a linked block becomes unstable, replace the linked database block itself and recreate the views from the live data source.
+- After replacing a linked database block, re-fetch it and document the resulting view IDs and structure before doing further repairs.
 
 ## Payload Rules
 
