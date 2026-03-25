@@ -8,12 +8,9 @@ project: "[[PR-177 Creacion de shipments a traves de plantilla]]"
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/30a1b015b98b808aac8bd89c0b020fae"
 task_id: TK-3365
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -23,7 +20,7 @@ tags:
 
 Se elimino la validacion de `duplicate value` para registros de shipment que ya traen `shipment_id`, permitiendo procesar actualizaciones legitimas sin falsos positivos.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Tipo: `Accionables`

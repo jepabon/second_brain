@@ -5,14 +5,12 @@ resource_type: system-design
 status: processed
 authors: []
 year: 2024
-source_url: "https://www.notion.so/4dd4e825986d4f0ea3f3118941ce0cdf"
 related:
   - "[[Nueva Definicion]]"
   - "[[GTD]]"
   - "[[Habitos Atomicos]]"
 tags:
   - second-brain/resource
-  - migrated/notion
   - system-design
 ---
 

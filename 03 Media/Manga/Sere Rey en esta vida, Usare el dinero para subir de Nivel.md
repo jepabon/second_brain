@@ -18,12 +18,11 @@ related: []
 tags:
   - media
   - media/manga
-  - migrated/notion
 ---
 
 # Sere Rey en esta vida, Usare el dinero para subir de Nivel
 
-## Estado original en Notion
+## Estado inicial
 
 - Status: `Reading`
 - Progreso actual: `240`
@@ -35,6 +34,6 @@ Manga de accion con sistema y protagonista dominante, marcado en la fuente origi
 
 ## Notas
 
-- En Notion ya tenia avance real, por eso se migra como `in-progress`.
+- En el sistema anterior ya tenia avance real, por eso se migra como `in-progress`.
 - Se conservaron generos y enlace externo, pero no el ruido de la pagina scrapeada.
 - El progreso puede seguir actualizandose localmente sin depender del sitio fuente.

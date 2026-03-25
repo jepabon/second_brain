@@ -8,12 +8,9 @@ project: "[[PR-111 Interoperabilidad tarea script de transferencia de informacio
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/1d61b015b98b8044bbc0f6ebf156b082"
 task_id: TK-3018
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -23,7 +20,7 @@ tags:
 
 Se definió el template de email requerido para el flujo de transferencia de información.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Tipo: `Accionables`

@@ -16,12 +16,11 @@ related:
 tags:
   - media
   - media/anime
-  - migrated/notion
 ---
 
 # My Home Hero
 
-## Estado original en Notion
+## Estado inicial
 
 - Status: `Not started`
 - Episodio actual: `0`
@@ -33,5 +32,5 @@ Tetsuo Tosu, un asalariado comun, descubre que su hija esta siendo maltratada po
 
 ## Notas
 
-- Se migra como `backlog` porque en Notion estaba pendiente y sin avance.
+- Se migra como `backlog` porque en el sistema anterior estaba pendiente y sin avance.
 - La sinopsis cambia bastante el tono respecto al resto del anime ya migrado, lo que ayuda a diversificar la libreria local.

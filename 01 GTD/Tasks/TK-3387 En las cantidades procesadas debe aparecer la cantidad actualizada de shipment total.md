@@ -8,12 +8,9 @@ project: "[[PR-178 Ajustes vista de resultados importacion de shipments]]"
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/30a1b015b98b800585d5c3f3b0ccaf71"
 task_id: TK-3387
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -29,7 +26,7 @@ Las cantidades procesadas deben reflejar el total real de shipments actualizados
 - [ ] No limitar el conteo a una sola coincidencia por `bl`.
 - [ ] Mostrar el total correcto en la vista de resultados.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Not started`
 - Tipo: `Accionables`

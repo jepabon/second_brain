@@ -3,14 +3,11 @@ title: Improvement 32479 (3) Shipment Clone modifications: Clonar shipment "Book
 kind: project
 status: completed
 area: "[[Trabajo]]"
-source: notion
-source_url: "https://www.notion.so/2561b015b98b81b69d3ed2eb8a171ef8"
 external_url: "https://dev.azure.com/Grydd/grydd-backend/_workitems/edit/32479"
 project_id: PR-142
 review:
 tags:
   - gtd/project
-  - migrated/notion
   - trabajo
 ---
 
@@ -20,7 +17,7 @@ tags:
 
 Extender el flujo de `Shipment Clone` para clonar el shipment `Book with Grydd Partners`, dejando registro del análisis y la estimación que soportaron la implementación.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Terminado`
 - ID: `PR-142`

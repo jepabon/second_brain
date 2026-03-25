@@ -8,12 +8,9 @@ project: "[[PR-143 Shipment Clone modifications clonar informacion de Shipping i
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/2561b015b98b804a9decc0e3a4f62efa"
 task_id: TK-3228
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -23,7 +20,7 @@ tags:
 
 Se realizó el análisis inicial del requerimiento para definir cómo clonar la información de `Shipping instructions` dentro del flujo de `Shipment Clone`.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Tipo: `Accionables`

@@ -5,13 +5,11 @@ resource_type: system-design
 status: processed
 authors: []
 year: 2025
-source_url: "https://www.notion.so/1a21b015b98b8098b35fdbfe086ca254"
 related:
-  - "[[99 System/Migracion desde Notion]]"
+  - "[[99 System/Migracion del sistema]]"
   - "[[99 System/Flujo GTD]]"
 tags:
   - second-brain/resource
-  - migrated/notion
   - system-design
 ---
 
@@ -40,4 +38,4 @@ Documento de criterio para un sistema personal que unifique captura, GTD, media 
 
 ## Nota
 
-Este recurso sirve como puente conceptual entre tu sistema antiguo en Notion y la nueva arquitectura local en Obsidian.
+Este recurso sirve como puente conceptual entre tu sistema antiguo en el sistema anterior y la nueva arquitectura local en Obsidian.

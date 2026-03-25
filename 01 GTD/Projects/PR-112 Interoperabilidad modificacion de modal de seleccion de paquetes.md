@@ -3,14 +3,11 @@ title: Improvement 24229* (2) Interoperabilidad: Modificación de modal de selec
 kind: project
 status: completed
 area: "[[Trabajo]]"
-source: notion
-source_url: "https://www.notion.so/1de1b015b98b81d9a096d0fa8ffcf977"
 external_url: "https://dev.azure.com/Grydd/grydd-backend/_workitems/edit/24229/"
 project_id: PR-112
 review:
 tags:
   - gtd/project
-  - migrated/notion
   - trabajo
 ---
 
@@ -20,7 +17,7 @@ tags:
 
 Modificar el modal de selección de paquetes en el flujo de interoperabilidad, incorporando soporte para `package code` tanto en backend como en la experiencia de edición y selección.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Terminado`
 - ID: `PR-112`

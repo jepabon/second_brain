@@ -8,13 +8,10 @@ project: "[[PR-142 Shipment Clone modifications clonar shipment Book with Grydd 
 contexts:
   - Trabajo
 energy: low
-source: notion
-source_url: "https://www.notion.so/2561b015b98b80de87b7fc8128a6966d"
 task_id: TK-3231
 scheduled: 2025-08-21
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -24,7 +21,7 @@ tags:
 
 Se registró la estimación de tiempo para implementar el clonado del shipment `Book with Grydd Partners`.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Tipo: `Accionables`

@@ -24,12 +24,11 @@ related:
 tags:
   - media
   - media/manga
-  - migrated/notion
 ---
 
 # Jugador que regreso 10.000 anos despues
 
-## Estado original en Notion
+## Estado inicial
 
 - Status: `Reading`
 - Progreso actual: `132`
@@ -40,6 +39,6 @@ Tras caer al infierno y sobrevivir alli durante diez mil anos devorando demonios
 
 ## Notas
 
-- En Notion ya estaba en seguimiento activo, por eso se migra como `in-progress`.
+- En el sistema anterior ya estaba en seguimiento activo, por eso se migra como `in-progress`.
 - La obra mezcla fantasia, accion y retorno del protagonista a su mundo original tras una experiencia extrema.
 - La fuente original la marcaba como publicandose.

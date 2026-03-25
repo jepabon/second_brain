@@ -3,14 +3,11 @@ title: Improvement 24260 (4) Interoperabilidad: Tarea/Script de transferencia de
 kind: project
 status: completed
 area: "[[Trabajo]]"
-source: notion
-source_url: "https://www.notion.so/1d61b015b98b812d9aa7df77628cc5c7"
 external_url: "https://dev.azure.com/Grydd/grydd-backend/_workitems/edit/24260"
 project_id: PR-111
 review:
 tags:
   - gtd/project
-  - migrated/notion
   - trabajo
 ---
 
@@ -20,7 +17,7 @@ tags:
 
 Implementar la tarea o script de transferencia de información en el contexto de interoperabilidad, cubriendo procesamiento de XML, validaciones de consistencia, manejo de archivos procesados y comunicación por email.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Terminado`
 - ID: `PR-111`
@@ -51,7 +48,7 @@ Implementar la tarea o script de transferencia de información en el contexto de
 
 ## Notas
 
-- Este proyecto en Notion tiene una relación amplia de tareas; aquí quedó avanzada una segunda tanda centrada en validaciones XML y manejo de organizaciones.
-- Algunas tareas comparten el mismo título en Notion, por eso localmente se diferenciaron por alcance funcional para evitar colisiones y conservar el detalle técnico.
+- Este proyecto en el sistema anterior tiene una relación amplia de tareas; aquí quedó avanzada una segunda tanda centrada en validaciones XML y manejo de organizaciones.
+- Algunas tareas comparten el mismo título en el sistema anterior, por eso localmente se diferenciaron por alcance funcional para evitar colisiones y conservar el detalle técnico.
 - La tercera tanda cubre el tramo donde el proceso ya crea organizaciones, consulta puertos, sincroniza BLs y limpia paquetes según el XML.
 - La cuarta tanda completa el tramo de automatización local: creación o actualización de paquetes, `sftp`, tarea programada, prueba end-to-end y preparación del trabajo de `unit tests`.

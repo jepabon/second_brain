@@ -8,12 +8,9 @@ project: "[[PR-111 Interoperabilidad tarea script de transferencia de informacio
 contexts:
   - Trabajo
 energy: high
-source: notion
-source_url: "https://www.notion.so/1de1b015b98b80d7b531d0580710d0f8"
 task_id: TK-3040
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -23,7 +20,7 @@ tags:
 
 El proceso ya crea o actualiza paquetes a partir de la información entregada por el XML, integrando ese paso dentro del flujo principal de transferencia.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Prioridad: `1. Normal`

@@ -8,12 +8,9 @@ project: "[[PR-111 Interoperabilidad tarea script de transferencia de informacio
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/1d61b015b98b80008cb5f4ac53e0737b"
 task_id: TK-3024
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -33,7 +30,7 @@ Se ampliaron las validaciones para asegurar que `ManifestBL` contenga las etique
 - `ConsignorCode`
 - `ConsignorName`
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Prioridad: `1. Normal`

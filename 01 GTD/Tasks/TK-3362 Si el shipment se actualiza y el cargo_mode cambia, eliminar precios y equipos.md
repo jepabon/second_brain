@@ -8,12 +8,9 @@ project: "[[PR-177 Creacion de shipments a traves de plantilla]]"
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/30a1b015b98b80bf9171c6eacd624b42"
 task_id: TK-3362
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -29,7 +26,7 @@ Evitar inconsistencias cuando un shipment existente cambie de `cargo_mode`, elim
 - [ ] Limpiar precios asociados que ya no correspondan al nuevo modo de carga.
 - [ ] Limpiar equipos asociados incompatibles con el nuevo modo de carga.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Not started`
 - Tipo: `Accionables`
@@ -37,4 +34,4 @@ Evitar inconsistencias cuando un shipment existente cambie de `cargo_mode`, elim
 
 ## Nota original
 
-> La pagina de Notion no tenia cuerpo, asi que se migra el objetivo operativo a partir del titulo y sus propiedades.
+> El registro original no tenia cuerpo, asi que se conserva el objetivo operativo a partir del titulo y sus propiedades.

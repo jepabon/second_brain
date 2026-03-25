@@ -16,12 +16,11 @@ related:
 tags:
   - media
   - media/anime
-  - migrated/notion
 ---
 
 # Seijo no Maryoku wa Bannou Desu
 
-## Estado original en Notion
+## Estado inicial
 
 - Status: `Not started`
 - Episodio actual: `0`
@@ -33,5 +32,5 @@ Sei, una oficinista de 20 años, es invocada a otro mundo, pero al principio no 
 
 ## Notas
 
-- Se migra como `backlog` porque en Notion estaba pendiente y sin avance.
+- Se migra como `backlog` porque en el sistema anterior estaba pendiente y sin avance.
 - La nota conserva una sinopsis suficiente para decidir si retomarla sin depender del sitio fuente.

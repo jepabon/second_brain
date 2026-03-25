@@ -8,12 +8,9 @@ project: "[[PR-111 Interoperabilidad tarea script de transferencia de informacio
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/1d71b015b98b80b49ecae34f6d7182dd"
 task_id: TK-3025
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -23,7 +20,7 @@ tags:
 
 La función de consulta de organizaciones se renombró para reflejar que ahora también cubre la creación cuando sea necesario.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Prioridad: `1. Normal`

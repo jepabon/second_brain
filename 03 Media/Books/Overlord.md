@@ -10,18 +10,16 @@ progress_current: 0
 progress_total:
 started:
 finished:
-source_url: "https://www.notion.so/2036ff91695444b3ac50d03f9b58a76b"
 external_url: "https://novelasligeras.net/index.php/producto/overlord-novela-ligera/"
 related: []
 tags:
   - media
   - media/book
-  - migrated/notion
 ---
 
 # Overlord
 
-## Estado original en Notion
+## Estado inicial
 
 - Status: `Not started`
 - Pagina actual: `0`

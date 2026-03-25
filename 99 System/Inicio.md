@@ -8,13 +8,13 @@ tags:
 # Inicio
 
 > [!important]
-> Este vault reemplaza la navegación principal que hoy depende de bases y vistas en Notion. Aquí el sistema vive en archivos, y las vistas `.base` son un apoyo, no la fuente de verdad.
+> Este vault reemplaza la navegación principal del sistema anterior. Aquí el sistema vive en archivos, y las vistas `.base` son un apoyo, no la fuente de verdad.
 
 ## GTD
 
 - [[01 GTD/GTD.base|Vista GTD]]
 - [[99 System/Flujo GTD|Flujo GTD]]
-- [[99 System/Migracion desde Notion|Migracion desde Notion]]
+- [[99 System/Migracion del sistema|Migracion del sistema]]
 
 ## Captura
 

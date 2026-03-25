@@ -7,19 +7,18 @@ authors: []
 year: 2023
 source_url: "https://zettelkasten.de/introduction/#the-anatomy-of-a-zettel"
 related:
-  - "[[99 System/Migracion desde Notion]]"
+  - "[[99 System/Migracion del sistema]]"
   - "[[02 Second Brain/Resources/Nueva Definicion]]"
 tags:
   - second-brain/bibliography
   - zettelkasten
-  - migrated/notion
 ---
 
 # Introduction to the Zettelkasten Method
 
 ## Referencia bibliografica
 
-- Titulo original en Notion: `Introduction to the Zettelkasten Method • Zettelkasten Method`
+- Titulo original en el sistema anterior: `Introduction to the Zettelkasten Method • Zettelkasten Method`
 - Tipo: articulo web
 - URL: https://zettelkasten.de/introduction/#the-anatomy-of-a-zettel
 

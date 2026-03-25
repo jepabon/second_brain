@@ -11,10 +11,14 @@
             "id": "56b08c0680435da6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "01 GTD/Tasks/TK-3387 En las cantidades procesadas debe aparecer la cantidad actualizada de shipment total.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "TK-3387 En las cantidades procesadas debe aparecer la cantidad actualizada de shipment total"
             }
           }
         ]
@@ -179,9 +183,34 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "56b08c0680435da6",
+  "active": "e92461c59f88f566",
   "lastOpenFiles": [
-    "01 GTD/Areas/Trabajo.md",
-    "Mejorar 1% cada día.md"
+    "99 System/Migracion desde Notion.md",
+    "99 System/Migracion del sistema.md",
+    "01 GTD/Tasks/TK-3395 Sacar cita para examenes de dermatologia.md",
+    "01 GTD/Tasks/TK-3241 Sacar cita para prueba de tenis de mesa.md",
+    "01 GTD/Tasks/TK-3168 Revisar si desde la pagina de citassalud se puede sacar la cita para la cirugia.md",
+    "01 GTD/Tasks/TK-2846 Revisar sincronizacion de emails en mi celular.md",
+    "01 GTD/Tasks/TK-1327 Leer manga.md",
+    "01 GTD/Tasks/TK-1347 Revisar metas.md",
+    "01 GTD/Tasks/TK-1205 Revisar activos.md",
+    "01 GTD/Tasks/TK-1152 Revisar obligaciones.md",
+    "01 GTD/Tasks/TK-718 Revisar pasivos.md",
+    "01 GTD/Tasks/TK-1075 Debo 45.000 a Diana 10.000 pasaje a la iglesia y 35.000 arreglo pelo.md",
+    "01 GTD/Tasks/TK-2895 Revision tecnomecanica Diana.md",
+    "01 GTD/Tasks/TK-1039 Hacer calculos de prestamo Mauricio y Anny.md",
+    "01 GTD/Tasks/TK-841 Separar dinero de anny en nequi.md",
+    "01 GTD/Tasks/TK-2127 Enviar 930.000 a Anny.md",
+    "01 GTD/Tasks/TK-1399 Llevar queso a Anny.md",
+    "01 GTD/Tasks/TK-2591 Registrar pago de Anny.md",
+    "01 GTD/Tasks/TK-1742 Crear espacio para contexto de veterinaria.md",
+    "01 GTD/Tasks/TK-1776 Registrar gastos de veterinaria.md",
+    "01 GTD/Tasks/TK-1922 Pagar a la tienda.md",
+    "01 GTD/Areas/Personal.md",
+    "01 GTD/Tasks/TK-744 Visitar casa para alquiler.md",
+    "03 Media/Books/Tsuki Ga Michibiku Isekai Douchuu.md",
+    "03 Media/Books/Habitos Atomicos.md",
+    "02 Second Brain/Resources/Nueva Definicion.md",
+    "02 Second Brain/Bibliography/Bibliography.base"
   ]
 }

@@ -8,12 +8,9 @@ project: "[[PR-178 Ajustes vista de resultados importacion de shipments]]"
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/30a1b015b98b801db349d76656ba814f"
 task_id: TK-3386
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -29,7 +26,7 @@ La vista de resultados del proceso debe incluir tambien la hoja `equipment` cuan
 - [ ] Mostrarla junto con las otras hojas procesadas.
 - [ ] Verificar que la informacion expuesta sea consistente con el archivo cargado.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Not started`
 - Tipo: `Accionables`

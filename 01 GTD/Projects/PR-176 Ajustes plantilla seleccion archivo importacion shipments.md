@@ -3,14 +3,11 @@ title: Improvement 37418 (10) Creacion de shipments a traves de plantilla: Ajust
 kind: project
 status: review
 area: "[[Trabajo]]"
-source: notion
-source_url: "https://www.notion.so/30a1b015b98b81e8ac8aff1b327da8f1"
 external_url: "https://dev.azure.com/Grydd/grydd-backend/_workitems/edit/37418/"
 project_id: PR-176
 review:
 tags:
   - gtd/project
-  - migrated/notion
   - trabajo
 ---
 
@@ -20,7 +17,7 @@ tags:
 
 Ajustar la plantilla y la vista de seleccion de archivo para importacion de shipments, dejando visibles y consistentes los campos que requiere el flujo antes de ejecutar el proceso.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `En revisión`
 - ID: `PR-176`

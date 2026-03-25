@@ -5,13 +5,11 @@ resource_type: finance-reference
 status: processed
 authors: []
 year: 2023
-source_url: "https://www.notion.so/3660cbf53ff549ebb6f4e206c1960729"
 related:
   - "[[Lluvia de ideas]]"
 tags:
   - second-brain/resource
   - finance
-  - migrated/notion
 ---
 
 # Links para pago de tarjetas de credito
@@ -34,4 +32,4 @@ Recurso operativo con accesos directos para pago de obligaciones financieras per
 
 ## Nota
 
-Este recurso traduce un apunte practico de Notion a una referencia local reutilizable dentro del vault.
+Este recurso traduce un apunte practico del sistema anterior a una referencia local reutilizable dentro del vault.

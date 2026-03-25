@@ -5,14 +5,12 @@ resource_type: wellbeing-reference
 status: processed
 authors: []
 year: 2025
-source_url: "https://www.notion.so/598a0b3c214c4cad84aa61acd914bbd1"
 related:
   - "[[Lluvia de ideas]]"
 tags:
   - second-brain/resource
   - wellbeing
   - music
-  - migrated/notion
 ---
 
 # Musica para dormir

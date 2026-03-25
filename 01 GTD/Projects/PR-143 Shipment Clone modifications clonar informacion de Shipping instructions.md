@@ -3,14 +3,11 @@ title: Improvement 32531 (4) Shipment Clone modifications: Clonar informacion de
 kind: project
 status: completed
 area: "[[Trabajo]]"
-source: notion
-source_url: "https://www.notion.so/2561b015b98b81acba76c5399d404f8b"
 external_url: "https://dev.azure.com/Grydd/grydd-backend/_workitems/edit/32531"
 project_id: PR-143
 review:
 tags:
   - gtd/project
-  - migrated/notion
   - trabajo
 ---
 
@@ -20,7 +17,7 @@ tags:
 
 Clonar la informacion de `Shipping instructions` dentro del flujo de `Shipment Clone`, dejando documentado el analisis y la estimacion de tiempo asociados al requerimiento.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Terminado`
 - ID: `PR-143`
@@ -33,5 +30,5 @@ Clonar la informacion de `Shipping instructions` dentro del flujo de `Shipment C
 
 ## Notas
 
-- Este proyecto en Notion expone una relacion compacta y cerrada, por eso se pudo migrar completo en una sola tanda.
+- Este proyecto en el sistema anterior expone una relacion compacta y cerrada, por eso se pudo migrar completo en una sola tanda.
 - Las tareas originales no tenian contenido adicional; se conserva su valor como huella de analisis y planificacion ya completada.

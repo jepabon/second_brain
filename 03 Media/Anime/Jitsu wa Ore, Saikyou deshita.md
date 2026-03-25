@@ -16,12 +16,11 @@ related:
 tags:
   - media
   - media/anime
-  - migrated/notion
 ---
 
 # Jitsu wa Ore, Saikyou deshita?
 
-## Estado original en Notion
+## Estado inicial
 
 - Status: `Completed`
 - Episodio actual: `12`
@@ -33,6 +32,6 @@ Isekai de fantasia y magia sobre un protagonista que renace en otro mundo y ocul
 
 ## Notas
 
-- En Notion figuraba como completado, asi que se migra como `completed`.
+- En el sistema anterior figuraba como completado, asi que se migra como `completed`.
 - La pagina original arrastraba mucho ruido de comentarios y listado de episodios; aqui se conserva solo el estado y la idea central.
 - Queda enlazado con [[Eminencia en la Sombra]] por afinidad tematica de protagonista poderoso que opera desde las sombras o con perfil bajo.

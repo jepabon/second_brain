@@ -8,12 +8,9 @@ project: "[[PR-142 Shipment Clone modifications clonar shipment Book with Grydd 
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/2561b015b98b80a69371d0e123ee74c7"
 task_id: TK-3227
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -23,7 +20,7 @@ tags:
 
 Se analizó el requerimiento para clonar el shipment `Book with Grydd Partners` dentro del módulo `Shipment Clone`.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Tipo: `Accionables`

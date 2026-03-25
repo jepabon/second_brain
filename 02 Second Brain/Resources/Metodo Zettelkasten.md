@@ -5,7 +5,6 @@ resource_type: methodology
 status: processed
 authors: []
 year: 2023
-source_url: "https://www.notion.so/421ba366879046ecb25b70406e3abf7d"
 related:
   - "[[Introduction to the Zettelkasten Method]]"
   - "[[GTD]]"
@@ -14,7 +13,6 @@ tags:
   - second-brain/resource
   - methodology
   - zettelkasten
-  - migrated/notion
 ---
 
 # Metodo Zettelkasten

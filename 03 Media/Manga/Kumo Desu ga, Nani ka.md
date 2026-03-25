@@ -22,12 +22,11 @@ related: []
 tags:
   - media
   - media/manga
-  - migrated/notion
 ---
 
 # Kumo Desu ga, Nani ka
 
-## Estado original en Notion
+## Estado inicial
 
 - Status: `Reading`
 - Progreso actual: `74.2`
@@ -38,6 +37,6 @@ Tras una catastrofe que alcanza un salon de secundaria, la protagonista reencarn
 
 ## Notas
 
-- En Notion ya estaba en lectura activa, por eso se migra como `in-progress`.
+- En el sistema anterior ya estaba en lectura activa, por eso se migra como `in-progress`.
 - Se conservaron los generos porque ayudan a filtrar y reencontrar la obra despues.
 - La fuente original la marcaba como publicandose, asi que puede seguir creciendo sin cerrar la ficha.

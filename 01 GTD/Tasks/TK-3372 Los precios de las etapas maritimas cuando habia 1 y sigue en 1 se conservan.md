@@ -8,12 +8,9 @@ project: "[[PR-177 Creacion de shipments a traves de plantilla]]"
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/30a1b015b98b80ea817fd0ffdbf12f0b"
 task_id: TK-3372
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -23,7 +20,7 @@ tags:
 
 Cuando una importación mantiene una sola etapa maritima, los precios existentes deben conservarse sin reasignaciones ni perdida de informacion.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Not started`
 - Prioridad: `1. Normal`

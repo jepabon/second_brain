@@ -8,12 +8,9 @@ project: "[[PR-111 Interoperabilidad tarea script de transferencia de informacio
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/1de1b015b98b80b3b923d27833a276ac"
 task_id: TK-3042
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -23,7 +20,7 @@ tags:
 
 Se configuró una tarea programada en local para mover archivos XML y automatizar el flujo de prueba del proceso.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Tipo: `Accionables`

@@ -5,7 +5,6 @@ resource_type: methodology
 status: processed
 authors: []
 year: 2022
-source_url: "https://www.notion.so/7cf7e397958b4e97abf2479b9d00cde2"
 related:
   - "[[99 System/Flujo GTD]]"
   - "[[Nueva Definicion]]"
@@ -14,7 +13,6 @@ tags:
   - second-brain/resource
   - methodology
   - gtd
-  - migrated/notion
 ---
 
 # GTD
@@ -42,5 +40,5 @@ Metodo de productividad para sacar compromisos de la cabeza, procesarlos en un s
 ## Uso en este vault
 
 - Refuerza la estructura operativa documentada en [[99 System/Flujo GTD]].
-- Justifica la separacion entre `projects`, `tasks`, `someday` y `reference` que se traslado desde Notion a markdown.
-- Sirve como nota base para seguir refinando el sistema sin arrastrar la complejidad de Notion.
+- Justifica la separacion entre `projects`, `tasks`, `someday` y `reference` que se traslado desde el sistema anterior a markdown.
+- Sirve como nota base para seguir refinando el sistema sin arrastrar complejidad innecesaria.

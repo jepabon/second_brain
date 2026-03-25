@@ -19,12 +19,11 @@ related: []
 tags:
   - media
   - media/manga
-  - migrated/notion
 ---
 
 # Sarumane
 
-## Estado original en Notion
+## Estado inicial
 
 - Status: `Not started`
 - Progreso actual: `0`

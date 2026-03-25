@@ -8,12 +8,9 @@ project: "[[PR-177 Creacion de shipments a traves de plantilla]]"
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/30a1b015b98b8035be56da8d7b2186b3"
 task_id: TK-3369
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -23,7 +20,7 @@ tags:
 
 La hoja `stages` se acepta como opcional cuando el proceso corresponde a una actualización de shipments. En los demás casos, se mantiene la regla de exigir al menos una etapa para conservar integridad operacional.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Prioridad: `1. Normal`

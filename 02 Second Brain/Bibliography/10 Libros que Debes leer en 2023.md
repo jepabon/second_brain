@@ -14,14 +14,13 @@ tags:
   - second-brain/bibliography
   - books
   - development-personal
-  - migrated/notion
 ---
 
 # 10 Libros que Debes leer en 2023
 
 ## Referencia bibliografica
 
-- Titulo original en Notion: `(574) 10 Libros que Debes leer en 2023 - Desarrollo Personal - YouTube`
+- Titulo original en el sistema anterior: `(574) 10 Libros que Debes leer en 2023 - Desarrollo Personal - YouTube`
 - Tipo: video
 - URL: https://www.youtube.com/watch?v=A4EMgAttpqg
 
@@ -31,7 +30,7 @@ Referencia curada de libros de desarrollo personal que puede servir como puerta 
 
 ## Notas de lectura
 
-- En Notion la pagina estaba vacia, pero el enlace conserva valor como fuente curada.
+- En el sistema anterior la pagina estaba vacia, pero el enlace conserva valor como fuente curada.
 - Sirve como lista semilla para seguir poblando el area de bibliografia y lectura personal.
 - Puede ayudar a decidir que libros mover de backlog a lectura activa.
 

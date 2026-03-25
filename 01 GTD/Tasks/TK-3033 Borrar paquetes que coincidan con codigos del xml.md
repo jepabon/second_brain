@@ -8,12 +8,9 @@ project: "[[PR-111 Interoperabilidad tarea script de transferencia de informacio
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/1d71b015b98b80db8931ef1f11198c97"
 task_id: TK-3033
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -23,7 +20,7 @@ tags:
 
 El flujo elimina los paquetes que coinciden con los códigos presentes en el XML para evitar inconsistencias o duplicados durante la actualización.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Prioridad: `1. Normal`

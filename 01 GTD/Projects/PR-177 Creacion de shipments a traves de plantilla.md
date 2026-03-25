@@ -3,14 +3,11 @@ title: Improvement 37425 (11) Creacion de shipments a traves de plantilla: Ajust
 kind: project
 status: active
 area: "[[Trabajo]]"
-source: notion
-source_url: "https://www.notion.so/30a1b015b98b8117b872cbabe7c20bb0"
 external_url: "https://dev.azure.com/Grydd/grydd-backend/_workitems/edit/37425"
 project_id: PR-177
 review:
 tags:
   - gtd/project
-  - migrated/notion
   - trabajo
 ---
 
@@ -20,7 +17,7 @@ tags:
 
 Mejorar el proceso de importacion de shipments a traves de plantilla, corrigiendo validaciones y comportamiento de campos clave durante la reconstruccion e importacion.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Activo`
 - ID: `PR-177`
@@ -54,5 +51,5 @@ Mejorar el proceso de importacion de shipments a traves de plantilla, corrigiend
 
 ## Notas
 
-- En Notion este proyecto tenia muchas tareas hijas. Aqui ya quedó migrada la mayor parte del set relacionado directamente en el proyecto.
-- Varias tareas abiertas originales en Notion no tenían cuerpo; en esos casos la nota local preserva la regla operativa usando título, estado y contexto.
+- En el sistema anterior este proyecto tenia muchas tareas hijas. Aqui ya quedó migrada la mayor parte del set relacionado directamente en el proyecto.
+- Varias tareas abiertas originales en el sistema anterior no tenían cuerpo; en esos casos la nota local preserva la regla operativa usando título, estado y contexto.

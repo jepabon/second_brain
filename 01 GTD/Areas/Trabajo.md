@@ -5,14 +5,13 @@ status: active
 tags:
   - gtd/area
   - work
-  - migrated/notion
 ---
 
 # Trabajo
 
 ## Responsabilidad
 
-Area operativa para tareas y proyectos laborales migrados desde Notion.
+Area operativa para tareas y proyectos laborales migrados desde el sistema anterior.
 
 ## Proyectos activos
 

@@ -8,12 +8,9 @@ project: "[[PR-177 Creacion de shipments a traves de plantilla]]"
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/30a1b015b98b80169d5de2117cc7f731"
 task_id: TK-3380
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 

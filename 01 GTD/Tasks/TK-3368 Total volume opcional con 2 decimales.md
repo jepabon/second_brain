@@ -8,12 +8,9 @@ project: "[[PR-177 Creacion de shipments a traves de plantilla]]"
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/30a1b015b98b80cfb8cae825df8b71a4"
 task_id: TK-3368
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -27,7 +24,7 @@ tags:
 
 - Posible error `invalid value`: `Campo numericos: field [column_name] only accepts numeric values.`
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Prioridad: `1. Normal`

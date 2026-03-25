@@ -8,12 +8,9 @@ project: "[[PR-111 Interoperabilidad tarea script de transferencia de informacio
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/1d71b015b98b802f9573fa82b14fb155"
 task_id: TK-3030
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -23,7 +20,7 @@ tags:
 
 Las organizaciones creadas durante el proceso reciben su `ExternalOrganizationDentifier`, permitiendo que el flujo mantenga consistencia entre datos externos e internos.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Prioridad: `1. Normal`

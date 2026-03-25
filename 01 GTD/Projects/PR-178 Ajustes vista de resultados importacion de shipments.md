@@ -3,14 +3,11 @@ title: Improvement 37428 (12) Creacion de shipments a traves de plantilla: Ajust
 kind: project
 status: active
 area: "[[Trabajo]]"
-source: notion
-source_url: "https://www.notion.so/30a1b015b98b81df9b5ffbd7c43acfa2"
 external_url: "https://dev.azure.com/Grydd/grydd-backend/_workitems/edit/37428"
 project_id: PR-178
 review:
 tags:
   - gtd/project
-  - migrated/notion
   - trabajo
 ---
 
@@ -20,7 +17,7 @@ tags:
 
 Mejorar la vista de resultados del proceso de importacion de shipments para reflejar correctamente errores, hojas procesadas y cantidades reales de actualizaciones.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Activo`
 - ID: `PR-178`

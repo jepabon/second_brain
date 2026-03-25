@@ -5,7 +5,6 @@ resource_type: writing-notes
 status: processed
 authors: []
 year: 2023
-source_url: "https://www.notion.so/420403d80e55418db8259dfb87c363d3"
 related:
   - "[[Manga]]"
   - "[[Anime]]"
@@ -13,7 +12,6 @@ tags:
   - second-brain/resource
   - writing
   - fiction
-  - migrated/notion
 ---
 
 # Analisis de personajes creados para ficcion

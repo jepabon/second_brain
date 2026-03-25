@@ -8,12 +8,9 @@ project: "[[PR-111 Interoperabilidad tarea script de transferencia de informacio
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/1d61b015b98b8031ad16cfb760185b32"
 task_id: TK-3023
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -29,7 +26,7 @@ Se añadieron validaciones para confirmar que `ManifestBL` incluya las etiquetas
 - `DepartureDate`
 - `ArrivalDate`
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Prioridad: `1. Normal`

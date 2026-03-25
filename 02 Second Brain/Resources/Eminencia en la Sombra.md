@@ -5,12 +5,10 @@ resource_type: media-notes
 status: processed
 authors: []
 year: 2023
-source_url: "https://www.notion.so/7762d695a60442048d3e4a8d9a1ca844"
 related:
   - "[[Jitsu wa Ore, Saikyou deshita?]]"
 tags:
   - second-brain/resource
-  - migrated/notion
   - media-notes
 ---
 

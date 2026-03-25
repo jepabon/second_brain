@@ -1,40 +1,36 @@
-filters: 'file.inFolder("02 Second Brain/Bibliography")'
-
+filters: file.inFolder("02 Second Brain/Bibliography")
 properties:
   source_type:
-    displayName: "Tipo"
+    displayName: Tipo
   status:
-    displayName: "Estado"
+    displayName: Estado
   authors:
-    displayName: "Autores"
+    displayName: Autores
   year:
-    displayName: "Ano"
+    displayName: Ano
   source_url:
-    displayName: "URL"
+    displayName: URL
   related:
-    displayName: "Relacionadas"
-
+    displayName: Relacionadas
 views:
   - type: table
-    name: "To Process"
-    filters: 'status == "inbox" || status == "unread" || status == "queued"'
+    name: To Process
+    filters: status == "inbox" || status == "unread" || status == "queued"
     order:
       - file.name
       - source_type
       - authors
       - year
-
   - type: table
-    name: "Processed"
-    filters: 'status == "processed" || status == "linked"'
+    name: Processed
+    filters: status == "processed" || status == "linked"
     order:
       - file.name
       - authors
       - year
       - related
-
   - type: table
-    name: "All References"
+    name: All References
     order:
       - file.name
       - source_type

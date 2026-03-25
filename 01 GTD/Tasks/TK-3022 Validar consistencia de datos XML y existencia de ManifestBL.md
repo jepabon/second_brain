@@ -8,12 +8,9 @@ project: "[[PR-111 Interoperabilidad tarea script de transferencia de informacio
 contexts:
   - Trabajo
 energy: high
-source: notion
-source_url: "https://www.notion.so/1d61b015b98b80e7aab1ee61265d9aec"
 task_id: TK-3022
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -23,7 +20,7 @@ tags:
 
 Se agregó una validación de consistencia sobre los datos del XML, incluyendo la verificación inicial de que exista al menos un `ManifestBL` antes de continuar con el procesamiento.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Prioridad: `1. Normal`

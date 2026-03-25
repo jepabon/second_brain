@@ -8,12 +8,9 @@ project: "[[PR-177 Creacion de shipments a traves de plantilla]]"
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/30a1b015b98b80eb8c16c0ff77178e00"
 task_id: TK-3373
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -29,7 +26,7 @@ Cuando una etapa maritima pase de una sola tarifa a varias, los precios no deben
 - [ ] Revisar por que los precios existentes se conservan solo en la primera.
 - [ ] Ajustar la logica de persistencia o presentacion para que el resultado sea correcto.
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Not started`
 - Prioridad: `1. Normal`

@@ -19,12 +19,11 @@ related: []
 tags:
   - media
   - media/anime
-  - migrated/notion
 ---
 
 # Arifureta Shokugyou de Sekai Saikyou Season 3
 
-## Estado original en Notion
+## Estado inicial
 
 - Status: `Stand By`
 - Episodio actual: `9`
@@ -36,5 +35,5 @@ Tercera temporada de Arifureta Shokugyou de Sekai Saikyou.
 
 ## Notas
 
-- En Notion estaba como lista de espera o pausa.
+- En el sistema anterior estaba como lista de espera o pausa.
 - Se migra como `paused` para diferenciarlo del backlog puro.

@@ -5,7 +5,6 @@ resource_type: structure-note
 status: processed
 authors: []
 year: 2023
-source_url: "https://www.notion.so/af8dc2b5ac5046fe8f51e1770db8fdba"
 related:
   - "[[Jitsu wa Ore, Saikyou deshita?]]"
   - "[[Arifureta Shokugyou de Sekai Saikyou Season 3]]"
@@ -15,7 +14,6 @@ tags:
   - second-brain/resource
   - structure-note
   - anime
-  - migrated/notion
 ---
 
 # Anime
@@ -26,7 +24,7 @@ Nota estructural para agrupar anime dentro del sistema local, separando fichas d
 
 ## Ideas clave
 
-- En Notion funcionaba mas como carpeta o contenedor que como ficha individual.
+- En el sistema anterior funcionaba mas como carpeta o contenedor que como ficha individual.
 - En Obsidian es mas util como punto de entrada liviano para enlazar obras y notas relacionadas.
 
 ## Uso en este vault

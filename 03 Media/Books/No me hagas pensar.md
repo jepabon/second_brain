@@ -10,17 +10,15 @@ progress_current: 0
 progress_total:
 started:
 finished:
-source_url: "https://www.notion.so/371fee7dbf9149d48850b7184369123f"
 related: []
 tags:
   - media
   - media/book
-  - migrated/notion
 ---
 
 # No me hagas pensar
 
-## Estado original en Notion
+## Estado inicial
 
 - Status: `Not started`
 - Pagina actual: `0`

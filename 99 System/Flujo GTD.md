@@ -79,7 +79,7 @@ Prioriza por:
 4. fecha real
 5. prioridad
 
-## Debilidades que se corrigen frente a Notion
+## Debilidades que se corrigen frente al sistema anterior
 
 - Se elimina dependencia de formulas y botones para operar.
 - Los estados dejan de estar escondidos en vistas filtradas.

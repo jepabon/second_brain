@@ -1,5 +1,5 @@
 ---
-title: Mi Segundo Cerebro en Notion
+title: Mi Segundo Cerebro en el sistema anterior
 kind: bibliography
 source_type: video
 status: processed
@@ -15,14 +15,13 @@ tags:
   - system-design
   - para
   - gtd
-  - migrated/notion
 ---
 
-# Mi Segundo Cerebro en Notion
+# Mi Segundo Cerebro en el sistema anterior
 
 ## Referencia bibliografica
 
-- Titulo original en Notion: `(1159) Mi Segundo Cerebro en Notion (Cómo Organizo Toda Mi Vida) - YouTube`
+- Titulo original en el sistema anterior: `(1159) Mi Segundo Cerebro en el sistema anterior (Cómo Organizo Toda Mi Vida) - YouTube`
 - Tipo: video
 - URL: https://www.youtube.com/watch?v=KvWgQCWiSSk
 
@@ -40,6 +39,6 @@ Combina GTD con PARA en un sistema que prioriza captura, procesamiento, proyecto
 
 ## Uso en este vault
 
-- Sirve como referencia comparativa entre tu sistema anterior en Notion y la implementacion local en Obsidian.
+- Sirve como referencia comparativa entre tu sistema anterior en el sistema anterior y la implementacion local en Obsidian.
 - Refuerza decisiones ya tomadas en [[Nueva Definicion]] y [[GTD]].
 - Puede orientar futuras mejoras en revisiones semanales, mensuales y gestion de metas.

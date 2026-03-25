@@ -8,12 +8,9 @@ project: "[[PR-176 Ajustes plantilla seleccion archivo importacion shipments]]"
 contexts:
   - Trabajo
 energy: medium
-source: notion
-source_url: "https://www.notion.so/30a1b015b98b80eb8668d579d5575275"
 task_id: TK-3357
 tags:
   - gtd/task
-  - migrated/notion
   - trabajo
 ---
 
@@ -57,7 +54,7 @@ Definir la estructura de campos de la hoja `equipment` para que la plantilla sop
 - [x] controlled_atmosphere
 - [x] cold_treatment
 
-## Estado original en Notion
+## Estado inicial
 
 - Estado: `Done`
 - Tipo: `Accionables`
