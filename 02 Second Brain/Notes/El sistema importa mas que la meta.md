@@ -6,6 +6,7 @@ related:
   - "[[Mejorar 1% cada día]]"
   - "[[El sistema da resultados permanentes]]"
   - "[[La felicidad no debe depender de la meta]]"
+  - "[[La identidad sostiene los hábitos duraderos]]"
 tags:
   - second-brain/note
 ---

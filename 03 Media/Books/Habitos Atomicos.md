@@ -6,7 +6,7 @@ status: in-progress
 creator: []
 genres: []
 rating:
-progress_current: 37
+progress_current: 53
 progress_total:
 started:
 finished:
@@ -17,6 +17,7 @@ related:
   - "[[El sistema da resultados permanentes]]"
   - "[[La felicidad no debe depender de la meta]]"
   - "[[Los hábitos se hacen visibles después de un punto crítico]]"
+  - "[[La identidad sostiene los hábitos duraderos]]"
 tags:
   - media
   - media/book
@@ -27,7 +28,7 @@ tags:
 ## Estado inicial
 
 - Status: `In progress`
-- Pagina actual: `37`
+- Pagina actual: `53`
 
 ## Notas
 
