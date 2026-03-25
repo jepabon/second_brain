@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 GTD/Tasks/TK-3387 En las cantidades procesadas debe aparecer la cantidad actualizada de shipment total.md",
+                "file": "02 Second Brain/Resources/Lluvia de ideas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TK-3387 En las cantidades procesadas debe aparecer la cantidad actualizada de shipment total"
+              "title": "Lluvia de ideas"
             }
           }
         ]
@@ -183,8 +183,12 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "e92461c59f88f566",
+  "active": "56b08c0680435da6",
   "lastOpenFiles": [
+    "03 Media/Books/Habitos Atomicos.md",
+    "02 Second Brain/Notes/Mejorar 1% cada día.md",
+    "03 Media/Anime/Arifureta Shokugyou de Sekai Saikyou Season 3.md",
+    "01 GTD/Tasks/TK-3387 En las cantidades procesadas debe aparecer la cantidad actualizada de shipment total.md",
     "99 System/Migracion desde Notion.md",
     "99 System/Migracion del sistema.md",
     "01 GTD/Tasks/TK-3395 Sacar cita para examenes de dermatologia.md",
@@ -207,10 +211,6 @@
     "01 GTD/Tasks/TK-1776 Registrar gastos de veterinaria.md",
     "01 GTD/Tasks/TK-1922 Pagar a la tienda.md",
     "01 GTD/Areas/Personal.md",
-    "01 GTD/Tasks/TK-744 Visitar casa para alquiler.md",
-    "03 Media/Books/Tsuki Ga Michibiku Isekai Douchuu.md",
-    "03 Media/Books/Habitos Atomicos.md",
-    "02 Second Brain/Resources/Nueva Definicion.md",
     "02 Second Brain/Bibliography/Bibliography.base"
   ]
 }

@@ -1,1 +1,0 @@
-Para ser mejor es suficiente con mejorar un 1% cada día, sin importar que no se sienta la diferencia cada vez nos acercaremos a ser mejores
