@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "028d845a937570dd",
+        "id": "6378110a7137fe88",
         "type": "tabs",
         "children": [
           {
-            "id": "ee049848551998fe",
+            "id": "56b08c0680435da6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mejorar 1% cada día.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Mejorar 1% cada día"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -183,8 +179,9 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "ee049848551998fe",
+  "active": "56b08c0680435da6",
   "lastOpenFiles": [
+    "01 GTD/Areas/Trabajo.md",
     "Mejorar 1% cada día.md"
   ]
 }

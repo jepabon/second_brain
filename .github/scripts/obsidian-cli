@@ -1,0 +1,282 @@
+#!/usr/bin/env python3
+
+import argparse
+import json
+import re
+import sys
+from pathlib import Path
+
+
+def error(message: str) -> int:
+    print(f"error: {message}", file=sys.stderr)
+    return 1
+
+
+def vault_root(explicit_vault: str | None) -> Path:
+    root = Path(explicit_vault).expanduser().resolve() if explicit_vault else Path.cwd().resolve()
+    return root
+
+
+def markdown_files(root: Path):
+    return sorted(path for path in root.rglob("*.md") if ".git" not in path.parts)
+
+
+def resolve_note(root: Path, file_name: str | None, path_value: str | None) -> Path:
+    if path_value:
+        candidate = (root / path_value).resolve()
+        if not candidate.exists():
+            raise FileNotFoundError(path_value)
+        return candidate
+
+    if not file_name:
+        raise FileNotFoundError("missing file or path")
+
+    matches = []
+    target = file_name.casefold()
+    for note in markdown_files(root):
+        if note.stem.casefold() == target or note.name.casefold() == target:
+            matches.append(note)
+
+    if not matches:
+        raise FileNotFoundError(file_name)
+    if len(matches) > 1:
+        names = ", ".join(str(match.relative_to(root)) for match in matches[:5])
+        raise RuntimeError(f"multiple matches for {file_name}: {names}")
+    return matches[0]
+
+
+def parse_scalar(raw: str):
+    text = raw.strip()
+    if text in {"true", "false"}:
+        return text == "true"
+    if text in {"null", "~"}:
+        return None
+    if re.fullmatch(r"-?\d+", text):
+        return int(text)
+    if re.fullmatch(r"-?\d+\.\d+", text):
+        return float(text)
+    if (text.startswith('"') and text.endswith('"')) or (text.startswith("'") and text.endswith("'")):
+        return text[1:-1]
+    return text
+
+
+def parse_value(raw: str):
+    text = raw.strip()
+    if not text:
+        return ""
+    if text[0] in "[{":
+        try:
+            return json.loads(text)
+        except json.JSONDecodeError:
+            pass
+    return parse_scalar(text)
+
+
+def split_frontmatter(content: str):
+    if not content.startswith("---\n"):
+        return {}, content
+
+    lines = content.splitlines(keepends=True)
+    end_index = None
+    for index in range(1, len(lines)):
+        if lines[index].strip() == "---":
+            end_index = index
+            break
+    if end_index is None:
+        return {}, content
+
+    fm_lines = lines[1:end_index]
+    body = "".join(lines[end_index + 1 :])
+    data = {}
+    current_key = None
+    for raw_line in fm_lines:
+        line = raw_line.rstrip("\n")
+        if not line.strip():
+            continue
+        if line.startswith("  - ") and current_key:
+            data.setdefault(current_key, []).append(parse_scalar(line[4:]))
+            continue
+        if ":" not in line:
+            current_key = None
+            continue
+        key, value = line.split(":", 1)
+        key = key.strip()
+        value = value.strip()
+        if value == "":
+            data[key] = []
+            current_key = key
+        else:
+            data[key] = parse_value(value)
+            current_key = None
+    return data, body
+
+
+def yaml_quote(text: str) -> str:
+    escaped = text.replace("\\", "\\\\").replace('"', '\\"')
+    return f'"{escaped}"'
+
+
+def dump_scalar(value):
+    if value is None:
+        return "null"
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    if isinstance(value, (int, float)):
+        return str(value)
+    text = str(value)
+    if text == "" or re.search(r"[:#\-\[\]\{\},&*!?|>'\"%@`]|^\s|\s$", text):
+        return yaml_quote(text)
+    return text
+
+
+def dump_frontmatter(data: dict) -> str:
+    lines = ["---"]
+    for key, value in data.items():
+        if isinstance(value, list):
+            lines.append(f"{key}:")
+            for item in value:
+                lines.append(f"  - {dump_scalar(item)}")
+        else:
+            lines.append(f"{key}: {dump_scalar(value)}")
+    lines.append("---")
+    return "\n".join(lines) + "\n"
+
+
+def command_read(args) -> int:
+    root = vault_root(args.vault)
+    note = resolve_note(root, args.file, args.path)
+    sys.stdout.write(note.read_text(encoding="utf-8"))
+    return 0
+
+
+def command_create(args) -> int:
+    root = vault_root(args.vault)
+    if args.path:
+        note = (root / args.path).resolve()
+    elif args.name:
+        note = (root / f"{args.name}.md").resolve()
+    else:
+        return error("create requires --name or --path")
+
+    if note.exists() and not args.overwrite:
+        return error(f"file already exists: {note.relative_to(root)}")
+
+    note.parent.mkdir(parents=True, exist_ok=True)
+    note.write_text(args.content or "", encoding="utf-8")
+    if not args.silent:
+        print(note.relative_to(root))
+    return 0
+
+
+def command_append(args) -> int:
+    root = vault_root(args.vault)
+    note = resolve_note(root, args.file, args.path)
+    existing = note.read_text(encoding="utf-8")
+    separator = "" if not existing or existing.endswith("\n") else "\n"
+    note.write_text(existing + separator + (args.content or ""), encoding="utf-8")
+    print(note.relative_to(root))
+    return 0
+
+
+def command_search(args) -> int:
+    root = vault_root(args.vault)
+    pattern = args.query.casefold()
+    matches = []
+    for note in markdown_files(root):
+        try:
+            lines = note.read_text(encoding="utf-8").splitlines()
+        except UnicodeDecodeError:
+            continue
+        for line_number, line in enumerate(lines, start=1):
+            if pattern in line.casefold():
+                matches.append(f"{note.relative_to(root)}:{line_number}: {line}")
+                if args.limit and len(matches) >= args.limit:
+                    break
+        if args.limit and len(matches) >= args.limit:
+            break
+    for match in matches:
+        print(match)
+    return 0
+
+
+def command_property_set(args) -> int:
+    root = vault_root(args.vault)
+    note = resolve_note(root, args.file, args.path)
+    content = note.read_text(encoding="utf-8")
+    frontmatter, body = split_frontmatter(content)
+    frontmatter[args.name] = parse_value(args.value)
+    note.write_text(dump_frontmatter(frontmatter) + body, encoding="utf-8")
+    print(note.relative_to(root))
+    return 0
+
+
+def command_backlinks(args) -> int:
+    root = vault_root(args.vault)
+    note = resolve_note(root, args.file, args.path)
+    title = note.stem
+    pattern = re.compile(r"\[\[" + re.escape(title) + r"(?:[\]|#])")
+    for candidate in markdown_files(root):
+        if candidate == note:
+            continue
+        text = candidate.read_text(encoding="utf-8")
+        if pattern.search(text):
+            print(candidate.relative_to(root))
+    return 0
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(prog="obsidian-cli")
+    parser.add_argument("--vault", help="Vault root. Defaults to current directory.")
+    subparsers = parser.add_subparsers(dest="command", required=True)
+
+    read_parser = subparsers.add_parser("read")
+    read_parser.add_argument("--file")
+    read_parser.add_argument("--path")
+    read_parser.set_defaults(func=command_read)
+
+    create_parser = subparsers.add_parser("create")
+    create_parser.add_argument("--name")
+    create_parser.add_argument("--path")
+    create_parser.add_argument("--content", default="")
+    create_parser.add_argument("--overwrite", action="store_true")
+    create_parser.add_argument("--silent", action="store_true")
+    create_parser.set_defaults(func=command_create)
+
+    append_parser = subparsers.add_parser("append")
+    append_parser.add_argument("--file")
+    append_parser.add_argument("--path")
+    append_parser.add_argument("--content", required=True)
+    append_parser.set_defaults(func=command_append)
+
+    search_parser = subparsers.add_parser("search")
+    search_parser.add_argument("--query", required=True)
+    search_parser.add_argument("--limit", type=int, default=10)
+    search_parser.set_defaults(func=command_search)
+
+    property_parser = subparsers.add_parser("property:set")
+    property_parser.add_argument("--name", required=True)
+    property_parser.add_argument("--value", required=True)
+    property_parser.add_argument("--file")
+    property_parser.add_argument("--path")
+    property_parser.set_defaults(func=command_property_set)
+
+    backlinks_parser = subparsers.add_parser("backlinks")
+    backlinks_parser.add_argument("--file")
+    backlinks_parser.add_argument("--path")
+    backlinks_parser.set_defaults(func=command_backlinks)
+    return parser
+
+
+def main() -> int:
+    parser = build_parser()
+    args = parser.parse_args()
+    try:
+        return args.func(args)
+    except FileNotFoundError as exc:
+        return error(f"file not found: {exc}")
+    except RuntimeError as exc:
+        return error(str(exc))
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

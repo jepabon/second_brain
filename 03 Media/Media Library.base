@@ -1,0 +1,62 @@
+filters: 'file.inFolder("03 Media")'
+
+properties:
+  media_type:
+    displayName: "Tipo"
+  status:
+    displayName: "Estado"
+  creator:
+    displayName: "Creador"
+  genres:
+    displayName: "Generos"
+  rating:
+    displayName: "Rating"
+  progress_current:
+    displayName: "Actual"
+  progress_total:
+    displayName: "Total"
+  started:
+    displayName: "Inicio"
+  finished:
+    displayName: "Fin"
+  source_url:
+    displayName: "URL"
+
+views:
+  - type: table
+    name: "Backlog"
+    filters: 'status == "backlog"'
+    order:
+      - file.name
+      - media_type
+      - creator
+      - rating
+
+  - type: table
+    name: "In Progress"
+    filters: 'status == "in-progress" || status == "paused"'
+    order:
+      - file.name
+      - media_type
+      - progress_current
+      - progress_total
+      - started
+
+  - type: table
+    name: "Completed"
+    filters: 'status == "completed"'
+    order:
+      - finished
+      - file.name
+      - media_type
+      - rating
+
+  - type: table
+    name: "All Media"
+    order:
+      - file.name
+      - media_type
+      - status
+      - creator
+      - genres
+      - rating
