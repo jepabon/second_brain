@@ -94,7 +94,7 @@ Zettelkasten rule for permanent notes:
 3. Link related notes through `related` and wikilinks in the body.
 4. If the source produces original understanding, create or update a note in `02 Second Brain/Notes/`.
 5. If more than one distinct idea emerges, split them into separate permanent notes and link them together.
-6. If the note becomes actionable, create a linked GTD task instead of turning the knowledge note into a to-do list.
+6. If the note becomes actionable, create a linked Notion GTD item instead of turning the knowledge note into a to-do list.
 
 ## Distinctions
 
@@ -109,4 +109,4 @@ Zettelkasten rule for permanent notes:
 - Keep permanent notes atomic and idea-scoped.
 - Preserve external URLs only when they remain useful.
 - Link ideas across folders with wikilinks.
-- Avoid mixing action management into knowledge notes except as explicit links to GTD notes.
+- Avoid mixing action management into knowledge notes except as explicit links to Notion GTD items or references.

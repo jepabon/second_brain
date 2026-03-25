@@ -8,13 +8,11 @@ year: 2024
 source_url: "https://www.youtube.com/watch?v=KvWgQCWiSSk"
 related:
   - "[[Nueva Definicion]]"
-  - "[[GTD]]"
   - "[[Lluvia de ideas]]"
 tags:
   - second-brain/bibliography
   - system-design
   - para
-  - gtd
 ---
 
 # Mi Segundo Cerebro en el sistema anterior
@@ -27,7 +25,7 @@ tags:
 
 ## Tesis o aporte principal
 
-Combina GTD con PARA en un sistema que prioriza captura, procesamiento, proyectos activos, revisiones y metas periodicas para organizar la vida completa.
+Combina metodos de captura y revision con PARA en un sistema que prioriza procesamiento, proyectos activos, revisiones y metas periodicas para organizar la vida completa.
 
 ## Notas de lectura
 
@@ -40,5 +38,5 @@ Combina GTD con PARA en un sistema que prioriza captura, procesamiento, proyecto
 ## Uso en este vault
 
 - Sirve como referencia comparativa entre tu sistema anterior en el sistema anterior y la implementacion local en Obsidian.
-- Refuerza decisiones ya tomadas en [[Nueva Definicion]] y [[GTD]].
+- Refuerza decisiones ya tomadas en [[Nueva Definicion]] y [[Lluvia de ideas]].
 - Puede orientar futuras mejoras en revisiones semanales, mensuales y gestion de metas.

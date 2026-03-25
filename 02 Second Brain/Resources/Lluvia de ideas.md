@@ -7,7 +7,6 @@ authors: []
 year: 2024
 related:
   - "[[Nueva Definicion]]"
-  - "[[GTD]]"
   - "[[Habitos Atomicos]]"
 tags:
   - second-brain/resource
@@ -47,5 +46,5 @@ Lista de capacidades deseadas para el sistema personal: captura, ideas, acciones
 
 ## Uso en este vault
 
-- Sirve como backlog conceptual para seguir expandiendo el sistema mas alla del GTD tecnico.
+- Sirve como backlog conceptual para seguir expandiendo el sistema mas alla de una sola herramienta de organizacion.
 - Conecta directamente con la necesidad de incorporar habitos, rutinas y media tracking en una sola arquitectura local.

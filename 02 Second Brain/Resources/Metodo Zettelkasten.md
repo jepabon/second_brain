@@ -7,7 +7,6 @@ authors: []
 year: 2023
 related:
   - "[[Introduction to the Zettelkasten Method]]"
-  - "[[GTD]]"
   - "[[Nueva Definicion]]"
 tags:
   - second-brain/resource
@@ -29,6 +28,6 @@ Nota estructural para agrupar recursos y lecturas sobre Zettelkasten como metodo
 
 ## Uso en este vault
 
-- Funciona como nota puente entre la metodologia GTD y la evolucion de `02 Second Brain`.
+- Funciona como nota puente entre metodologias de organizacion personal y la evolucion de `02 Second Brain`.
 - Enlaza el marco conceptual con la lectura base [[Introduction to the Zettelkasten Method]].
 - Puede crecer luego en un mapa de contenido o structure note real.

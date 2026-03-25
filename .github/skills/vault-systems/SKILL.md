@@ -1,18 +1,15 @@
 ---
 name: vault-systems
-description: Route work into the correct local system in this vault. Use when the user asks to capture, clarify, organize, procesar inbox, decidir entre tarea, proyecto, area, recurso, bibliografia, nota permanente, media, archivo, second brain, GTD, anime, manga, libro, pelicula o serie.
+description: Route work into the correct system between Notion GTD and the local Obsidian vault. Use when the user asks to capture, clarify, organize, procesar inbox, decidir entre tarea, proyecto, area, recurso, bibliografia, nota permanente, media, archivo, second brain, GTD, anime, manga, libro, pelicula o serie.
 ---
 
 # Vault Systems Skill
 
-For GitHub Copilot, treat this vault as a file-first system with three main operational domains: GTD, Second Brain, and Media. Choose the destination before creating or editing notes.
+For GitHub Copilot, treat GTD as a Notion system and treat this vault as local storage for Second Brain and Media. Choose the destination before creating or editing notes.
 
 ## System Map
 
-- `00 Inbox/`: raw capture that has not been clarified yet
-- `01 GTD/Tasks/`: single executable actions
-- `01 GTD/Projects/`: outcomes that require more than one action
-- `01 GTD/Areas/`: ongoing responsibilities
+- Notion GTD: tasks, projects, inbox, waiting, scheduled, someday, and related execution state
 - `02 Second Brain/Resources/`: source material and reusable references
 - `02 Second Brain/Bibliography/`: books, papers, and sources used as thinking input
 - `02 Second Brain/Notes/`: permanent notes, synthesis, and maps of content
@@ -26,6 +23,7 @@ For GitHub Copilot, treat this vault as a file-first system with three main oper
 - the item requires execution
 - the user is asking what to do next
 - the note represents a commitment, follow-up, reminder, or deliverable
+- when this happens, create or update the item in Notion through the MCP instead of creating a local markdown GTD note
 
 ### Send to Second Brain when
 
@@ -46,9 +44,9 @@ For GitHub Copilot, treat this vault as a file-first system with three main oper
 
 ## Decision Workflow
 
-1. If it is still unclear, capture it in `00 Inbox/`.
-2. If it is actionable and needs one concrete step, create a GTD task.
-3. If it is actionable and needs multiple steps, create a GTD project and ensure it can produce at least one next task.
+1. If it is still unclear, ask the user whether it belongs in Notion GTD or the local vault.
+2. If it is actionable and needs one concrete step, create a GTD task in Notion.
+3. If it is actionable and needs multiple steps, create a GTD project in Notion and ensure it can produce at least one next task.
 4. If it is an ongoing responsibility, use an area note.
 5. If it is source material, create a resource or bibliography note.
 6. If it is cultural consumption, create a media note in the correct subtype folder.
@@ -65,5 +63,5 @@ For GitHub Copilot, treat this vault as a file-first system with three main oper
 - Prefer one file per meaningful entity.
 - Use wikilinks between related notes instead of opaque relation systems.
 - Keep required metadata minimal and operational.
-- Preserve the existing folder structure and template fields.
-- If the user asks for capture without clarification, put it in `00 Inbox/` first.
+- Preserve the existing local folder structure for Second Brain and Media.
+- Do not recreate GTD structure locally in Obsidian.

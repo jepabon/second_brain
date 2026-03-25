@@ -6,8 +6,7 @@ status: processed
 authors: []
 year: 2025
 related:
-  - "[[99 System/Migracion del sistema]]"
-  - "[[99 System/Flujo GTD]]"
+  - "[[Lluvia de ideas]]"
 tags:
   - second-brain/resource
   - system-design
@@ -17,7 +16,7 @@ tags:
 
 ## Resumen
 
-Documento de criterio para un sistema personal que unifique captura, GTD, media tracking, second brain, rutinas, finanzas y registros personales.
+Documento de criterio para un sistema personal que unifique captura, organizacion personal, media tracking, second brain, rutinas, finanzas y registros personales.
 
 ## Ideas clave
 
@@ -38,4 +37,4 @@ Documento de criterio para un sistema personal que unifique captura, GTD, media 
 
 ## Nota
 
-Este recurso sirve como puente conceptual entre tu sistema antiguo en el sistema anterior y la nueva arquitectura local en Obsidian.
+Este recurso sirve como puente conceptual entre tu sistema antiguo en el sistema anterior y la arquitectura actual separada entre Notion para GTD y Obsidian para conocimiento y media.

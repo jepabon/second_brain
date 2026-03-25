@@ -60,7 +60,7 @@ Use `99 Templates/Media Template.md` as the base model.
 
 - Use Media when the primary goal is tracking consumption.
 - Use Bibliography when the primary goal is extracting ideas or citing the source.
-- If the media item creates a commitment, create a separate GTD task and link it.
+- If the media item creates a commitment, create a separate Notion GTD item and link it if the user wants a local reference.
 
 ## Operating Principles
 

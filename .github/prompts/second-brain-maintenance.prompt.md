@@ -18,10 +18,10 @@ Flujo obligatorio:
 2. Detecta notas con metadatos incompletos, secciones vacias o pocos enlaces utiles.
 3. Mejora notas existentes cuando el contenido disponible lo permita.
 4. Si una fuente ya contiene una idea clara y reusable, crea o actualiza una nota en `02 Second Brain/Notes/`.
-5. Si aparece una accion real, enlazala a GTD en vez de mezclarla dentro de la nota de conocimiento.
+5. Si aparece una accion real, enviala a Notion GTD en vez de mezclarla dentro de la nota de conocimiento.
 
 Reglas:
-- Sigue [Migracion del sistema](../../99 System/Migracion del sistema.md), la skill [second-brain-flow](../skills/second-brain-flow/SKILL.md) y la skill [obsidian-markdown](../skills/obsidian-markdown/SKILL.md).
+- Sigue la skill [second-brain-flow](../skills/second-brain-flow/SKILL.md) y la skill [obsidian-markdown](../skills/obsidian-markdown/SKILL.md).
 - No agregues relleno ni resumas sin base textual suficiente.
 - Conserva URLs externas utiles.
 - Usa wikilinks para conectar ideas relacionadas.

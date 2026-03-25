@@ -11,14 +11,10 @@
             "id": "56b08c0680435da6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 Second Brain/Resources/Lluvia de ideas.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Lluvia de ideas"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -53,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "[\"status\":]",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mejorar 1% cada día.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de Mejorar 1% cada día"
+              "title": "Enlaces entrantes"
             }
           },
           {
@@ -180,11 +175,27 @@
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false
+      "bases:Crear nueva base": false,
+      "obsidian-kanban:Create new board": false
     }
   },
-  "active": "56b08c0680435da6",
+  "active": "e92461c59f88f566",
   "lastOpenFiles": [
+    "01 GTD/GTD.base",
+    "01 GTD/Contextos.base",
+    "01 GTD/Areas/Personal.md",
+    "2026-03-26.md",
+    "01 GTD/Projects/PR-177 Creacion de shipments a traves de plantilla.md",
+    "01 GTD/Areas/Trabajo.md",
+    "01 GTD/GTD Kanban.md",
+    "01 GTD/Tasks/TK-3397 Hacer reset inicial de 20 minutos del hogar.md",
+    "01 GTD/Tasks/TK-3396 Definir checklist minima diaria y semanal del hogar.md",
+    "01 GTD/Tasks/TK-841 Separar dinero de anny en nequi.md",
+    "01 GTD/Tasks/TK-744 Visitar casa para alquiler.md",
+    "01 GTD/Tasks/TK-718 Revisar pasivos.md",
+    "03 Media/Manga/Jugador que regreso 10.000 anos despues.md",
+    "02 Second Brain/Resources/GTD.md",
+    "02 Second Brain/Resources/Lluvia de ideas.md",
     "03 Media/Books/Habitos Atomicos.md",
     "02 Second Brain/Notes/Mejorar 1% cada día.md",
     "03 Media/Anime/Arifureta Shokugyou de Sekai Saikyou Season 3.md",
@@ -197,20 +208,6 @@
     "01 GTD/Tasks/TK-2846 Revisar sincronizacion de emails en mi celular.md",
     "01 GTD/Tasks/TK-1327 Leer manga.md",
     "01 GTD/Tasks/TK-1347 Revisar metas.md",
-    "01 GTD/Tasks/TK-1205 Revisar activos.md",
-    "01 GTD/Tasks/TK-1152 Revisar obligaciones.md",
-    "01 GTD/Tasks/TK-718 Revisar pasivos.md",
-    "01 GTD/Tasks/TK-1075 Debo 45.000 a Diana 10.000 pasaje a la iglesia y 35.000 arreglo pelo.md",
-    "01 GTD/Tasks/TK-2895 Revision tecnomecanica Diana.md",
-    "01 GTD/Tasks/TK-1039 Hacer calculos de prestamo Mauricio y Anny.md",
-    "01 GTD/Tasks/TK-841 Separar dinero de anny en nequi.md",
-    "01 GTD/Tasks/TK-2127 Enviar 930.000 a Anny.md",
-    "01 GTD/Tasks/TK-1399 Llevar queso a Anny.md",
-    "01 GTD/Tasks/TK-2591 Registrar pago de Anny.md",
-    "01 GTD/Tasks/TK-1742 Crear espacio para contexto de veterinaria.md",
-    "01 GTD/Tasks/TK-1776 Registrar gastos de veterinaria.md",
-    "01 GTD/Tasks/TK-1922 Pagar a la tienda.md",
-    "01 GTD/Areas/Personal.md",
     "02 Second Brain/Bibliography/Bibliography.base"
   ]
 }

@@ -8,24 +8,7 @@ tags:
 # Inicio
 
 > [!important]
-> Este vault reemplaza la navegación principal del sistema anterior. Aquí el sistema vive en archivos, y las vistas `.base` son un apoyo, no la fuente de verdad.
-
-## GTD
-
-- [[01 GTD/GTD.base|Vista GTD]]
-- [[99 System/Flujo GTD|Flujo GTD]]
-- [[99 System/Migracion del sistema|Migracion del sistema]]
-
-## Captura
-
-- [[00 Inbox]]
-- Crear una nota nueva en `00 Inbox/` cuando algo entre al sistema y aun no este procesado.
-
-## Ejecucion
-
-- Trabaja tareas desde `01 GTD/Tasks/`.
-- Mantiene proyectos activos en `01 GTD/Projects/`.
-- Mantiene areas de responsabilidad en `01 GTD/Areas/`.
+> GTD ya no se opera en este vault. La gestion de tareas y proyectos vuelve a Notion. Este vault queda para `Second Brain` y `Media`.
 
 ## Second Brain
 
@@ -36,9 +19,6 @@ tags:
 
 ## Templates
 
-- [[99 Templates/Task Template]]
-- [[99 Templates/Project Template]]
-- [[99 Templates/Area Template]]
 - [[99 Templates/Resource Template]]
 - [[99 Templates/Bibliography Template]]
 - [[99 Templates/Media Template]]
@@ -47,6 +27,6 @@ tags:
 
 1. Un archivo por entidad importante.
 2. Wikilinks en lugar de relaciones opacas.
-3. Menos propiedades obligatorias, mas claridad operativa.
-4. Los dashboards muestran trabajo; no esconden logica critica.
-5. Todo debe poder sobrevivir aunque ninguna vista este abierta.
+3. Menos propiedades obligatorias, mas claridad conceptual.
+4. Los dashboards apoyan la navegacion local; no sostienen GTD.
+5. El conocimiento y el tracking de media deben poder sobrevivir aunque ninguna vista este abierta.

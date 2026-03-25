@@ -7,7 +7,6 @@ authors: []
 year: 2023
 source_url: "https://zettelkasten.de/introduction/#the-anatomy-of-a-zettel"
 related:
-  - "[[99 System/Migracion del sistema]]"
   - "[[02 Second Brain/Resources/Nueva Definicion]]"
 tags:
   - second-brain/bibliography
